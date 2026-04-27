@@ -4,7 +4,7 @@ import { getFeaturedProjects } from "@/lib/projects";
 import ProjectCard from "@/components/ProjectCard";
 
 export const metadata: Metadata = {
-  title: "About Systems Over Goals",
+  title: "About",
   description:
     "Learn about the systems-over-goals philosophy and the AI-powered tools we build to help people create lasting habits and routines that compound over time.",
   openGraph: {
@@ -12,6 +12,18 @@ export const metadata: Metadata = {
     description:
       "The story behind Systems Over Goals — building AI tools rooted in the belief that systems create more lasting success than one-time goals.",
     url: "https://systemsovergoals.com/about",
+    images: [
+      {
+        url: "/goalstosystems.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About Systems Over Goals",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/goalstosystems.jpg"],
   },
   alternates: {
     canonical: "https://systemsovergoals.com/about",

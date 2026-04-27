@@ -4,14 +4,40 @@ import { getAllProjects } from "@/lib/projects";
 import ProjectCard from "@/components/ProjectCard";
 
 export const metadata: Metadata = {
-  title: "Systems Over Goals – AI-Powered Tools for Sustainable Success",
+  title: {
+    absolute: "Systems Over Goals – AI-Powered Tools for Sustainable Success",
+  },
   description:
     "Most goals fail because they focus on the destination, not the journey. Discover AI-powered tools designed around systems thinking — the habits, routines, and processes that make success inevitable.",
+  keywords: [
+    "systems over goals",
+    "systems thinking",
+    "AI tools",
+    "habits",
+    "productivity",
+    "goal setting",
+    "personal development",
+    "AI-powered apps",
+  ],
   openGraph: {
     title: "Systems Over Goals – AI-Powered Tools for Sustainable Success",
     description:
       "Discover AI tools built around systems thinking. Replace fleeting goals with consistent processes that compound over time.",
     url: "https://systemsovergoals.com",
+    images: [
+      {
+        url: "/goalstosystems.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Systems Over Goals – AI-Powered Tools for Sustainable Success",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Systems Over Goals – AI-Powered Tools for Sustainable Success",
+    description: "Discover AI tools built around systems thinking.",
+    images: ["/goalstosystems.jpg"],
   },
   alternates: {
     canonical: "https://systemsovergoals.com",
@@ -53,11 +79,34 @@ const articleExamples = [
   { label: "System", text: "Reviewing finances every Friday and reading 20 pages before bed" },
 ];
 
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Systems Over Goals",
+    url: "https://systemsovergoals.com",
+    description:
+      "A collection of AI-powered tools built on the belief that consistent systems create more lasting results than one-time goals.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Systems Over Goals",
+    url: "https://systemsovergoals.com",
+    logo: "https://systemsovergoals.com/goalstosystems.jpg",
+    sameAs: ["https://goalstosystems.com"],
+  },
+];
+
 export default function HomePage() {
   const projects = getAllProjects();
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* ─── Hero ─── */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

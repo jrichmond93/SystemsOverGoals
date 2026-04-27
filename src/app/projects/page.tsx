@@ -3,13 +3,35 @@ import { getAllProjects } from "@/lib/projects";
 import ProjectCard from "@/components/ProjectCard";
 
 export const metadata: Metadata = {
-  title: "All Projects",
+  title: "AI-Powered Projects & Tools",
   description:
-    "Browse all AI-powered tools and platforms built around the systems-over-goals philosophy — from personal development and fintech to EdTech and wellness.",
+    "Browse 20 AI-powered tools and platforms built around the systems-over-goals philosophy — from personal development and fintech to EdTech and wellness.",
+  keywords: [
+    "AI tools",
+    "AI apps",
+    "systems thinking tools",
+    "productivity AI",
+    "AI portfolio",
+    "EdTech AI",
+    "fintech AI",
+    "wellness AI",
+  ],
   openGraph: {
-    title: "All Projects | Systems Over Goals",
-    description: "Browse AI-powered tools built for lasting results through systems thinking.",
+    title: "AI-Powered Projects & Tools | Systems Over Goals",
+    description: "Browse 20 AI-powered tools built for lasting results through systems thinking.",
     url: "https://systemsovergoals.com/projects",
+    images: [
+      {
+        url: "/goalstosystems.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AI-Powered Projects – Systems Over Goals",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/goalstosystems.jpg"],
   },
   alternates: {
     canonical: "https://systemsovergoals.com/projects",

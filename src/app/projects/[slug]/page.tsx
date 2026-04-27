@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const ogImage = project.screenshot_url || undefined;
 
   return {
-    title: project.seo_title,
+    title: { absolute: project.seo_title },
     description: project.seo_description,
     openGraph: {
       title: project.seo_title,

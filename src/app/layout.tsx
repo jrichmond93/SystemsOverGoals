@@ -18,9 +18,18 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Systems Over Goals",
     locale: "en_US",
+    images: [
+      {
+        url: "/goalstosystems.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Systems Over Goals – AI-Powered Tools for Sustainable Success",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/goalstosystems.jpg"],
   },
   robots: {
     index: true,
