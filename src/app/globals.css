@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --color-brand: #1d4ed8;
+  --color-brand-dark: #1e40af;
+  --color-accent: #7c3aed;
+}
